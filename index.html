@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        #resetBtn {
+            background-color: #e74c3c;
+        }
+        
+        #resetBtn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador</h1>
+        <div class="counter" id="counter">0</div>
+        <div class="buttons">
+            <button id="incrementBtn">Contar</button>
+            <button id="resetBtn">Zerar</button>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona os elementos do DOM
+        const counterElement = document.getElementById('counter');
+        const incrementBtn = document.getElementById('incrementBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        
+        // Inicializa o contador
+        let counter = 0;
+        
+        // Função para atualizar o contador na tela
+        function updateCounter() {
+            counterElement.textContent = counter;
+        }
+        
+        // Evento de clique no botão de incrementar
+        incrementBtn.addEventListener('click', function() {
+            counter++;
+            updateCounter();
+        });
+        
+        // Evento de clique no botão de zerar
+        resetBtn.addEventListener('click', function() {
+            counter = 0;
+            updateCounter();
+        });
+        
+        // Inicializa o contador na tela
+        updateCounter();
+    </script>
+</body>
+</html>
