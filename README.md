@@ -1,4 +1,4 @@
 # contador
 Simple Counter
 
-## Contador simples para auxilio em taregas que exigem contagem
+## Contador simples para auxílio em tarefas que exigem contagem
